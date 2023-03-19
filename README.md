@@ -1,3 +1,3 @@
 #Learning Repo
 
-#My Notes: https://www.notion.so/Git-GitHub-8def6008803148fc965e3c553a499431?pvs=4
+#My Notes: https://www.notion.so/Programing-e14b06b049b44332a15f4b6e44b657b7?pvs=4
