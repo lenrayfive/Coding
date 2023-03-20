@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulario de inicio de sesión</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">Log In</h4>
+            </div>
+            <div class="card-body">
+              <form method="post">
+                <fieldset id="verification">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="password" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%&*()_+\-=[\]{};':\|,./?]).+$" required>
+                        <input type="checkbox" onclick="myFunction()"> Show Password
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" class="form-group">
+                        <option value="non" selected>No specified</option>
+                        <option value="Male">Male</option>
+                        <option value="female">Female</option>
+                    </select>    
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary btn-block">log In</button>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Insert extra comments</label>
+                    <textarea name="comment" class="form-control" id="comments"></textarea>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--password toggle function -->
+    <script>
+        function myFunction() {
+          var x = document.getElementById("password");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+    </script>
+    <!--style
+    this style turn into red the border of the password and email fields until they are correct-->
+    <style>
+        #password:user-invalid, #email:user-invalid {
+            border: 2px solid red;
+        }
+    </style>
+        
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
